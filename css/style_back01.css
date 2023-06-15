@@ -59,7 +59,7 @@
 
 
 
-/* 헤더 메인 메뉴 영역 */
+
 .header .gnb {}
 
 
@@ -69,6 +69,7 @@
 }
 
 /* 결국 li에 패딩을 줘따 */
+
 .header .gnb .main_menu>li {
     position: relative;
     padding: 0 30px;
@@ -129,7 +130,7 @@
     line-height: 40rem;
 }
 
-/* 헤더 로그인 영역 */
+
 .header .login_area .member {
     display: flex;
     gap: 30px;
@@ -167,7 +168,7 @@
 
 
 
-/* 메인 섹션 1 - 메인 슬라이드 */
+/* 메인 섹션 1 */
 
 
 .main_visual {
@@ -175,96 +176,33 @@
     height: 100vh;
 }
 
-/* 패럴렉스 슬라이드 셋 */
-.main_visual .main_slide .itm {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
+.main_slide .itm {
+    font-size: 100rem;
+    transition: 1s;
 }
 
-
-
-/* 패럴렉스 슬라이드 이미지 기본 셋 */
-.main_visual .main_slide .itm .slide-image {
-    position: absolute;
-    inset: 0 0 0 0;
+.main_slide .itm.on {
+    font-size: 200rem;
 }
 
-
-.main_slide .itm .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-
-    text-align: center;
-}
-
-.main_slide .itm .img_box {
-    margin: 0 0 50rem 0;
-}
-
-.main_slide .itm p {
-    color: var(--wc);
-    margin: 0 0 50rem 0;
-    text-align: center;
-    font-size: 19rem;
-    font-weight: 400;
-    line-height: 26rem;
-
-    transform: translate(150rem, 0);
-    opacity: 0;
-    transition: .5s 1s;
-}
-
-.main_slide .itm.on p {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.main_slide .itm .btn {
-    display: inline-block;
-    color: var(--wc);
-    font-size: 20rem;
-    padding: 20rem 30rem;
-    border: 3px solid var(--wc);
-    border-radius: 30rem;
-
-    transform: translate(-100rem, 0);
-    opacity: 0;
-    transition: .5s 1.5s;
-}
-
-.main_slide .itm.on .btn {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-/*  패럴렉스 슬라이드 애니메이션 타입 */
-/* .swiper-wrapper {
-    transition-timing-function: linear;
-} */
-
-.main_visual .main_slide .itm01 .slide-image {
+.main_slide .itm01 {
     height: 100vh;
     background: url(../img/img_visual01.jpg) no-repeat center center/cover;
 }
 
-.main_visual .main_slide .itm02 .slide-image {
+.main_slide .itm02 {
     height: 100vh;
     background: url(../img/img_visual02.jpg) no-repeat center center/cover;
 }
 
-/* 슬라이드 화살표 */
 .main_visual .arrows {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 1600rem;
+    max-width: 1400rem;
     width: 100%;
-    z-index: 998;
+    z-index: 999;
 }
 
 .main_visual .arrows i {
@@ -290,7 +228,49 @@
     border-radius: 50%;
 }
 
-/* 푸터 */
+.main_visual .slide_dots li.on button {
+    font-size: 100rem;
+}
+
+.circle {
+    position: absolute;
+    top: 500px;
+    right: 500px;
+    width: 500px;
+    height: 500px;
+    background: tomato;
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.circle span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 250px;
+    width: 3px;
+    background: #ffffff;
+}
+
+.circle span:nth-child(1) {
+    transform: translate(-50%, 0) rotate(0deg);
+    transform-origin: center bottom;
+}
+
+.circle span::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 50px;
+    height: 50px;
+    background: #09847F;
+    border-radius: 50%;
+}
+
 
 .footer {
     height: 100vh;

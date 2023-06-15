@@ -9,28 +9,16 @@ $(function () {
     })
 
 
-    let snum = 1;
     const mainSlide = new Swiper('.main_slide', {
         loop: true,
+        parallax: true,
+        // centeredSlides: true,
+        speed: 2000,
         autoplay: {
-            delay: 1000,
+            delay: 4000,
             disableOnInteraction: false,
         },
         slideActiveClass: 'on',
-        on: {
-            init: function () {
-                console.log('오잉???', this.realIndex, this.slides.length, this)
-                $('.num span').text(this.realIndex + 1);
-                $('.num strong').text(this.slides.length);
-            },
-            slideChangeTransitionEnd: function () {
-                $('.num span').text(this.realIndex + 1);
-                $('.circle span:nth-child(1)').css({
-                    transform: 'translate(-50%, 0) rotate(' + snum * 45 + 'deg)'
-                });
-                snum = snum + 1;
-            }
-        },
     });
 
     $('.main_visual .arrows .left').on('click', function () {
@@ -42,11 +30,5 @@ $(function () {
         mainSlide.slideNext();
     })
 
-
-    $('.main_visual .slide_dots li').on('click', function () {
-        let idx = $(this).index();
-        mainSlide.slideTo(idx);
-        $(this).addClass('on').siblings().removeClass('on');
-    })
 
 })
