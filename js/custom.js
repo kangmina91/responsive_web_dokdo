@@ -63,6 +63,12 @@ $(function () {
         noticeSlide.slideNext();
     })
 
+    $('.scroll').on('click', function (e) {
+        e.preventDefault();
+        const st = $(this.hash).offset().top;
+        console.log(st);
+        $('html, body').animate({ scrollTop: st - 80 }, 600);
+    })
 
 
 

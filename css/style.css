@@ -363,14 +363,29 @@
     position: absolute;
     top: 0;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .main_visual .arrows .left {
+    position: absolute;
     left: 15rem;
+    top: 0;
+}
+
+.main_visual:hover .arrows .left {
+    opacity: 0.8;
+    transform: translate(80rem, 0);
 }
 
 .main_visual .arrows .right {
+    position: absolute;
     right: 15rem;
+    top: 0;
+}
+
+.main_visual:hover .arrows .right {
+    opacity: 0.8;
+    transform: translate(-80rem, 0);
 }
 
 
@@ -422,6 +437,67 @@
     margin: 0 0 20rem 0;
 }
 
+.main_visual .scroll {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+    cursor: pointer;
+
+}
+
+.main_visual .scroll span {
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+
+}
+
+.main_visual .scroll span::before {
+
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, 0);
+}
+
+.main_visual .scroll span::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+
+    animation: circle 1.5s infinite cubic-bezier(1, .18, .49, 1.03);
+
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, 0);
+        outline: 0 solid rgba(255, 255, 255, 1);
+
+    }
+
+    90% {
+        outline: 0 solid rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        transform: translate(-50%, 90px);
+        outline: 20px solid rgba(255, 255, 255, 0);
+    }
+}
 
 /* 메인 콘텐츠 섹션 */
 .main_content .content {
@@ -638,6 +714,7 @@
     transform: translate(0, 0);
 }
 
+
 .main_banner .content a {
     display: block;
     padding: 60rem 80rem;
@@ -709,11 +786,53 @@
     margin: 0 auto 30rem auto;
 }
 
+
 .footer .top .content .txt {
+    position: relative;
+    top: 100rem;
+    left: 0;
+    width: 700rem;
     font-size: 30rem;
     font-weight: 500;
     font-family: 'Noto Serif KR';
     color: var(--gc);
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.footer .top .content .txt span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    white-space: nowrap;
+}
+
+/* 덮는 글자 */
+.footer .top .content .txt span::after {
+    content: "“ 경상북도 울릉읍 독도리 1-96 ”";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #333;
+    /* width: 0; */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid #999;
+    /* transition-timing-function: steps(20, end); */
+    animation: tt 4s infinite steps(20, start);
+    /* animation-timing-function: steps(20, end); */
+}
+
+@keyframes tt {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 665rem;
+    }
 }
 
 
