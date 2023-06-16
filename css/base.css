@@ -102,6 +102,7 @@ img {
 address,
 em {
     font-style: normal;
+
 }
 
 table {
@@ -146,8 +147,10 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section,
+address {
     display: block;
+    box-sizing: border-box;
 }
 
 figure {
