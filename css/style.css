@@ -772,7 +772,7 @@
     border-radius: 180rem 0 0 0;
     overflow: hidden;
     /* height: 680rem; */
-    background: #434250 url(../img/bg_banner.jpg) no-repeat center bottom;
+    background: #434250 url(../img/bg_banner.jpg) no-repeat center bottom/cover;
     padding: 200rem 0 300rem 0;
 }
 
@@ -789,13 +789,13 @@
 
 .footer .top .content .txt {
     position: relative;
-    top: 100rem;
+    top: 0;
     left: 0;
-    width: 700rem;
+    width: 425rem;
     font-size: 30rem;
     font-weight: 500;
     font-family: 'Noto Serif KR';
-    color: var(--gc);
+    color: var(--dc);
     text-align: center;
     margin: 0 auto;
 
@@ -815,14 +815,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: #333;
-    /* width: 0; */
+    color: var(--wc);
+    width: 0;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 1px solid #999;
-    /* transition-timing-function: steps(20, end); */
-    animation: tt 4s infinite steps(20, start);
-    /* animation-timing-function: steps(20, end); */
+    border-right: 2px solid var(--gc);
+    animation: tt 8s infinite steps(24, start);
 }
 
 @keyframes tt {
@@ -830,76 +828,81 @@
         width: 0;
     }
 
+    50% {
+        width: 425rem;
+    }
+
     100% {
-        width: 665rem;
+        width: 0;
     }
 }
 
 
-.footer .top .dots span {
+.footer .top .dots .waves {
     position: absolute;
-    left: 50%;
-    width: 5px;
-    height: 5px;
+    width: 5rem;
+    height: 5rem;
     background: var(--gc);
     border-radius: 50%;
     color: var(--gc);
-    word-break: keep-all;
-    cursor: pointer;
 }
 
-/* 
-.waves {
-    background: rgba(255, 255, 255, 0.4);
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-}
-
+/* 파동 효과 */
 .waves:before,
 .waves:after {
-    content: '';
+    content: "";
     position: absolute;
+    top: -10rem;
+    left: -10rem;
     background: white;
-    margin-left: -12px;
-    margin-top: -12px;
-    width: 50px;
-    height: 50px;
+    width: 25rem;
+    height: 25rem;
     border-radius: 50%;
-    animation: wave 3s infinite linear;
+    animation: wave 1s infinite linear;
 }
 
-.waves:after {
-    opacity: 0;
-    animation: wave 3s 1.5s infinite linear;
-}
 
 /* Keyframes */
-/* @keyframes wave {
+@keyframes wave {
     0% {
         transform: scale(0);
         opacity: 1;
     }
 
     100% {
-        transform: scale(3.5);
+        transform: scale(2.0);
         opacity: 0;
     }
-} */
-.footer .top .dots span:nth-child(1) {
+}
 
+.footer .top .dots .waves:nth-child(1) {
     bottom: 310rem;
     margin: 0 0 0 -310rem;
 }
 
-.footer .top .dots span:nth-child(2) {
-
-
+.footer .top .dots .waves:nth-child(2) {
     bottom: 200rem;
     margin: 0 0 0 160rem;
 }
 
 
+.footer .top .dots p:nth-child(3) {
+    position: absolute;
+    top: 280rem;
+    left: 950rem;
+    color: var(--gc);
+    font-size: 20rem;
+
+}
+
+
+.footer .top .dots p:nth-child(4) {
+    position: absolute;
+    top: 395rem;
+    left: 1420rem;
+    color: var(--gc);
+    font-size: 20rem;
+}
 
 .footer .bottom {
     padding: 50rem 0 100rem 0;
@@ -939,4 +942,35 @@
 .footer .bottom .copyright {
     font-size: 12rem;
     color: var(--lc);
+}
+
+.to_top {
+    position: fixed;
+    bottom: 200rem;
+    right: 50rem;
+    z-index: 999;
+
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+
+
+}
+
+.to_top.on {
+    bottom: 50rem;
+    visibility: visible;
+    opacity: 1;
+}
+
+.to_top i {
+    color: var(--dc);
+    background: var(--wc);
+    padding: 10rem;
+    margin: 20rem 5rem;
+    border-radius: 50%;
+    font-size: 20rem;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #dadcdf, 0 4px 8px 0 rgba(0, 0, 0, .15);
 }

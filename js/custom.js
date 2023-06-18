@@ -63,12 +63,27 @@ $(function () {
         noticeSlide.slideNext();
     })
 
+
+
     $('.scroll').on('click', function (e) {
         e.preventDefault();
         const st = $(this.hash).offset().top;
         console.log(st);
         $('html, body').animate({ scrollTop: st - 80 }, 600);
     })
+
+
+    // 탑 스크롤 
+    $('.to_top').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    })
+    // 탑 스크롤 없앴다가 나타나게 만들기
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        sct > 1000 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
+    })
+
+
 
 
 
