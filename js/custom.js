@@ -58,7 +58,7 @@ $(function () {
     });
 
 
-    $('.main_noticee .arrows .left').on('click', function () {
+    $('.main_notice .arrows .left').on('click', function () {
         noticeSlide.slidePrev();
     })
 
