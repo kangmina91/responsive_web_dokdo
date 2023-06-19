@@ -1517,12 +1517,13 @@
         background: var(--gc);
         padding: 15rem 16rem;
         border-radius: 50%;
-        font-size: 30rem;
+        font-size: 20rem;
     }
 
     .main_content .content .right .desc .tel {
-        font-size: 40rem;
+        font-size: 25rem;
         font-weight: 700;
+        word-break: keep-all;
     }
 
     .main_content .content .list>* {
@@ -1707,6 +1708,9 @@
         /* height: 680rem; */
         background: #434250 url(../img/bg_banner.jpg) no-repeat center bottom/cover;
         padding: 200rem 0 300rem 0;
+        width: 100%;
+        height: auto;
+
     }
 
 
