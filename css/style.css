@@ -1056,13 +1056,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 80rem;
-
-        transition: height 0.5s;
+        height: 50rem;
     }
 
     .header.on .header_wrap {
-        height: 80rem;
+        height: 50rem;
     }
 
 
@@ -1072,15 +1070,17 @@
         font-size: 0;
     }
 
-    .header h1 img {
-        height: 100vh;
+    .header h1 img:first-child {
+        display: none;
+    }
 
+    .header h1 img:last-child {
+        width: 70%;
     }
 
     .header.oo h1 img:last-child {
         filter: invert(0);
     }
-
 
     .gnb {
         position: fixed;
@@ -1960,13 +1960,13 @@
         display: block;
 
         position: fixed;
-        top: 100rem;
+        top: 10rem;
         right: 30rem;
         z-index: 1000;
 
         font-size: 25rem;
         color: var(--mc);
-        padding: 3px;
+        padding: 2px;
         background: var(--gc);
         cursor: pointer;
         box-shadow: 0 0 1px 1px #dadcdf, 0 1px 1px 0 rgba(0, 0, 0, .25);

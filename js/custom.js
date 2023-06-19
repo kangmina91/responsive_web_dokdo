@@ -73,7 +73,13 @@ $(function () {
         e.preventDefault();
         const st = $(this.hash).offset().top;
         console.log(st);
-        $('html, body').animate({ scrollTop: st - 80 }, 600);
+
+        if ($(window).width() < 767) {
+            $('html, body').animate({ scrollTop: st }, 600);
+        } else {
+            $('html, body').animate({ scrollTop: st - 80 }, 600);
+        }
+
     })
 
 
