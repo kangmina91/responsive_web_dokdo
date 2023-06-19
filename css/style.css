@@ -875,6 +875,7 @@
     }
 }
 
+
 .footer .top .dots .waves:nth-child(1) {
     bottom: 310rem;
     margin: 0 0 0 -310rem;
@@ -886,23 +887,27 @@
 }
 
 
-.footer .top .dots p:nth-child(3) {
+/* 동도 */
+.footer .top .dots span:nth-child(3) {
     position: absolute;
-    top: 280rem;
-    left: 950rem;
+    bottom: 330rem;
+    margin: 0 0 0 -325rem;
     color: var(--gc);
     font-size: 20rem;
 
 }
 
-
-.footer .top .dots p:nth-child(4) {
+/* 서도 */
+.footer .top .dots span:nth-child(4) {
     position: absolute;
-    top: 395rem;
-    left: 1420rem;
+    bottom: 220rem;
+    margin: 0 0 0 145rem;
     color: var(--gc);
     font-size: 20rem;
 }
+
+
+
 
 .footer .bottom {
     padding: 50rem 0 100rem 0;
@@ -967,10 +972,10 @@
 .to_top i {
     color: var(--dc);
     background: var(--wc);
-    padding: 10rem;
+    padding: 5rem 6rem;
     margin: 20rem 5rem;
     border-radius: 50%;
     font-size: 20rem;
     cursor: pointer;
-    box-shadow: 0 0 0 1px #dadcdf, 0 4px 8px 0 rgba(0, 0, 0, .15);
+    box-shadow: 0 0 1px 1px #dadcdf, 0 1px 1px 0 rgba(0, 0, 0, .25);
 }
