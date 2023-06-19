@@ -1073,7 +1073,7 @@
     }
 
     .header h1 img {
-        height: 50%;
+        height: 100vh;
 
     }
 
@@ -1249,13 +1249,13 @@
     }
 
     .main_slide .itm .img_box {
-        margin: 0 0 50rem 0;
+        margin: 50rem 0 0 0;
     }
 
     .main_slide .itm p {
         word-break: keep-all;
         color: var(--wc);
-        margin: 0 0 50rem 0;
+        margin: 50rem 0 0 0;
         text-align: center;
         font-size: 17rem;
         font-weight: \300;
@@ -1275,13 +1275,13 @@
 
     .main_slide .itm .btn {
         opacity: 0;
-        transform: translate(-100rem, 0);
+        transform: translate(-100rem, 50rem);
         transition: .5s 1.5s;
     }
 
     .main_slide .itm.on .btn {
         opacity: 1;
-        transform: translate(0, 0);
+        transform: translate(0, 50rem);
     }
 
     /*  패럴렉스 슬라이드 애니메이션 타입 */
@@ -1345,7 +1345,7 @@
     /* 신청 버튼 */
     .main_visual .btn_circle {
         position: absolute;
-        bottom: -100rem;
+        bottom: -140rem;
         right: 30rem;
         z-index: 998;
 
@@ -1359,8 +1359,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 200rem;
-        height: 200rem;
+        width: 125rem;
+        height: 125rem;
         background: var(--mc);
         color: var(--wc);
         font-size: 20rem;
@@ -1960,7 +1960,7 @@
         display: block;
 
         position: fixed;
-        top: 25rem;
+        top: 100rem;
         right: 30rem;
         z-index: 1000;
 
