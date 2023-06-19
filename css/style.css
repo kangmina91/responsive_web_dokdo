@@ -1559,9 +1559,15 @@
         margin: 0 0 27rem 0;
     }
 
+
+    .main_notice .arrows {
+        margin: -20rem 10rem -80rem 0;
+
+    }
+
     .main_notice .arrows i {
         padding: 14rem 16rem;
-        font-size: 25rem;
+        font-size: 15rem;
         background: var(--dc);
         color: var(--wc);
         border-radius: 50%;
